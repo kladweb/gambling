@@ -1,22 +1,116 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500&family=Rubik&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    position: relative;
-    min-width: 320px;
-    font-family: 'Lexend', sans-serif;
-    color: #FFF;
-    background: #1E1231;
+  position: relative;
+  min-width: 320px;
+  font-family: 'Lexend', sans-serif;
+  box-sizing: border-box;
+}
+
+.home_page {
+  color: #FFF;
+  background: #1E1231;
+}
+
+.title_main {
+  display: inline-block;
+  padding: 20em 2.625em 30em 8.75em;
+  width: 41.8em;
 }
 
 .name {
-    font-weight: 500;
+  font-size: 6em;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.name-outline {
+  font-size: 2em;
+  color: #FFF;
+  opacity: 60%;
 }
 
 .name span {
-    color: #478BF9;
+  color: #478BF9;
+}
+
+.banner_bg {
+  display: inline-flex;
+  justify-content: space-between;
+  position: fixed;
+  vertical-align: top;
+  /*display: inline-block;*/
+  width: 20.9em;
+  height: 67.5rem;
+  /*background: lightblue;*/
+  overflow: hidden;
+}
+
+.line_1 {
+  width: 6.24em;
+  opacity: 20%;
+  /*background: lemonchiffon;*/
+  transform: translateY(-7em);
+  animation: move-down 12s linear infinite;
+}
+
+.line_1_1 {
+  transform: translateY(6.24em);
+}
+
+.line_1_2 {
+  transform: translateY(-152em);
+}
+
+.line_2 {
+  width: 6.24em;
+  opacity: 60%;
+  /*background: lemonchiffon;*/
+  /*transform: translateY(23em);*/
+  animation: move-up 15s linear infinite;
+}
+
+.line_2_1 {
+  /*transform: translateY(-9em);*/
+}
+
+.line_2_2 {
+  /*transform: translateY(-9em);*/
+}
+
+.line_3 {
+  width: 6.24em;
+  opacity: 40%;
+  /*background: lemonchiffon;*/
+  transform: translateY(0.5em);
+  animation: move-down 13s linear infinite;
+}
+
+.line_3_2 {
+  transform: translateY(-142em);
+}
+
+.line_3_1 {
+  transform: translateY(1.3em);
+}
+
+@keyframes move-down {
+  100% {
+    transform: translateY(72.2em);
+  }
+}
+
+@keyframes move-up {
+  100% {
+    transform: translateY(-79.4em);
+  }
+}
+
+object {
+  margin: 0.75em 0;
 }
