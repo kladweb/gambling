@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500&family=Rubik&display=swap');
 
+@font-face {
+  font-family: 'Futura PT';
+  src: local('Futura PT Medium'), local('Futura-PT-Medium'),
+  url('../fonts/FuturaPT-Medium.woff2') format('woff2'),
+  url('../fonts/FuturaPT-Medium.woff') format('woff'),
+  url('../fonts/FuturaPT-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,15 +22,30 @@ body {
   box-sizing: border-box;
 }
 
+.header {
+  width: 100%;
+  position: fixed;
+  height: 7.5em;
+  background: yellow;
+  z-index: 5;
+}
+
+
+
+
+
+
 .home_page {
+  display: flex;
+  justify-content: space-between;
   color: #FFF;
   background: #1E1231;
 }
 
 .title_main {
-  display: inline-block;
-  padding: 20em 2.625em 30em 8.75em;
-  width: 41.8em;
+  display: block;
+  margin: 26em 0 0 7.2%;
+  width: 34.8%;
 }
 
 .name {
@@ -39,22 +64,22 @@ body {
   color: #478BF9;
 }
 
+
+
+
 .banner_bg {
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
-  position: fixed;
+  margin-top: 5.1em;
+  height: 100vh;
   vertical-align: top;
-  /*display: inline-block;*/
-  width: 20.9em;
-  height: 67.5rem;
-  /*background: lightblue;*/
+  width: 20.8em;
   overflow: hidden;
 }
 
 .line_1 {
-  width: 6.24em;
+  width: 29.7%;
   opacity: 20%;
-  /*background: lemonchiffon;*/
   transform: translateY(-7em);
   animation: move-down 12s linear infinite;
 }
@@ -68,7 +93,7 @@ body {
 }
 
 .line_2 {
-  width: 6.24em;
+  width: 29.7%;
   opacity: 60%;
   /*background: lemonchiffon;*/
   /*transform: translateY(23em);*/
@@ -84,7 +109,7 @@ body {
 }
 
 .line_3 {
-  width: 6.24em;
+  width: 29.7%;
   opacity: 40%;
   /*background: lemonchiffon;*/
   transform: translateY(0.5em);
@@ -99,6 +124,12 @@ body {
   transform: translateY(1.3em);
 }
 
+object {
+  margin: 0.75em 0;
+  /*width: 100%;*/
+  /*height: 100%;*/
+}
+
 @keyframes move-down {
   100% {
     transform: translateY(72.2em);
@@ -111,6 +142,99 @@ body {
   }
 }
 
-object {
-  margin: 0.75em 0;
+
+/*BLOG*/
+
+.blog {
+  display: block;
+  margin: 16.25em 7.2% 0 1.25em;
+  width: 27.6%;
+  height: min-content;
+  vertical-align: top;
+  position: relative;
+  /*background: #9ec1e0;*/
+}
+
+.blog h2 {
+  font-size: 2.5em;
+  text-align: center;
+  padding-bottom: 0.35em;
+}
+
+.area_card {
+  padding-right: 0.75rem;
+  height: 37.2em;
+  background: rgba(255, 255, 255, 0.12);
+  border: solid 3px #478BF9;
+  border-radius: 6rem;
+  overflow-y: scroll;
+  scroll-margin: 10px;
+  -ms-overflow-style: none;  /* IE и Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.area_card::-webkit-scrollbar {
+  display: none;
+}
+
+/*.area_card::-webkit-scrollbar {*/
+/*  width: 7px;*/
+/*  background-color: rgba(255, 255, 255, 0.12);*/
+/*  border-radius: 10px;*/
+/*  transform: translateX(5px);*/
+/*}*/
+
+/*.area_card::-webkit-scrollbar-thumb {*/
+/*  border-radius: 10px;*/
+/*  background-color: #478BF9;*/
+/*}*/
+
+/*.area_card::-webkit-scrollbar-track {*/
+/*  border-radius: 10px;*/
+/*}*/
+
+.review-card {
+  background: #1E1231;
+  border-radius: 5rem;
+  margin: 1rem 1.25rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.review-card-active {
+  background: #478BF9;
+}
+
+.methods {
+  margin: 0 4rem;
+  padding-top: 0.875rem;
+  font-size: 1.5rem;
+  color: #FFF;
+}
+
+.methods_date {
+  margin: 0 4rem;
+  padding: 0.75rem 0 0.92rem;
+  font-family: 'Futura PT', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #FFF;
+  opacity: 60%;
+}
+
+.scrollbar {
+  position: absolute;
+  top: 25%;
+  right: 0.9rem;
+  width: 8px;
+  height: 60%;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+}
+
+.scrollbar_active {
+  height: 30%;
+  background: #478BF9;
+  opacity: 100%;
+  border-radius: 4px;
 }
