@@ -37,7 +37,7 @@ function clickActions() {
   }
   buttonLang.addEventListener('click', changeLanguage);
   function changeLanguage() {
-    if (window.innerWidth < 540) {
+    if (window.innerWidth < 700) {
       return;
     }
     if (buttonEn.style.display === 'none') {
@@ -54,12 +54,36 @@ function clickActions() {
       iconOpen.classList.remove('close');
       iconClose.classList.add('close');
       pageButtons.style.visibility = 'hidden';
-      pageMenu.classList.remove('open');
+      pageMenu.classList.remove('open-flex');
     } else {
       iconOpen.classList.add('close');
       iconClose.classList.remove('close');
       pageButtons.style.visibility = 'visible';
-      pageMenu.classList.add('open');
+      pageMenu.classList.add('open-flex');
+    }
+  }
+
+  // проверяем, чтобы меню не оставалось в состоянии "display: none" при изменении разрешения экрана (например поворот
+  // телефона):
+  window.addEventListener('resize', checkMenu);
+  function checkMenu() {
+    if (pageButtons.style.visibility === 'hidden' && window.innerWidth > 700) {
+      pageButtons.style.visibility = 'visible';
+      pageMenu.classList.add('open-flex');
+    }
+    if (pageButtons.style.visibility === 'visible' && window.innerWidth <= 700) {
+      pageButtons.style.visibility = 'hidden';
+      pageMenu.classList.remove('open-flex');
+      iconOpen.classList.remove('close');
+      iconClose.classList.add('close');
+      buttonRu.style.display = 'none';
+      buttonEn.style.display = 'none';
+    }
+    if (getComputedStyle(buttonRu).display !== 'none' && window.innerWidth <= 700) {
+      buttonRu.style.display = 'none';
+    }
+    if (getComputedStyle(buttonEn).display !== 'none' && window.innerWidth <= 700) {
+      buttonEn.style.display = 'none';
     }
   }
 }

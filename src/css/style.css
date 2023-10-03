@@ -15,10 +15,6 @@
     padding: 0;
 }
 
-/*html {*/
-/*  scroll-behavior: smooth;*/
-/*}*/
-
 body {
     position: relative;
     min-width: 320px;
@@ -111,12 +107,12 @@ body {
     width: 1.5rem;
 }
 
-.modal_close {
+.lang_ru {
     display: none;
 }
 
-.lang_ru {
-    display: none;
+.language_button {
+    width: 4.69rem;
 }
 
 .login_button {
@@ -127,6 +123,10 @@ body {
 .signup_button {
     background-color: #478BF9;
     border: none;
+}
+
+.modal_close {
+    display: none;
 }
 
 /*Home page*/
@@ -200,7 +200,7 @@ body {
     width: 29.6%;
     opacity: 20%;
     transform: translateY(-7rem);
-    /*animation: move-down 12s linear infinite;*/
+    animation: move-down 12s linear infinite;
 }
 
 .line_1_1 {
@@ -214,24 +214,14 @@ body {
 .line_2 {
     width: 29.6%;
     opacity: 60%;
-    /*background: lemonchiffon;*/
-    /*transform: translateY(23em);*/
-    /*animation: move-up 15s linear infinite;*/
-}
-
-.line_2_1 {
-    /*transform: translateY(-9em);*/
-}
-
-.line_2_2 {
-    /*transform: translateY(-9em);*/
+    animation: move-up 15s linear infinite;
 }
 
 .line_3 {
     width: 29.6%;
     opacity: 40%;
     transform: translateY(0.5em);
-    /*animation: move-down 13s linear infinite;*/
+    animation: move-down 13s linear infinite;
 }
 
 .line_3_1 {
@@ -277,7 +267,6 @@ body {
         transform: translateY(-79.4em);
     }
 }
-
 
 /*BLOG*/
 
@@ -362,6 +351,7 @@ body {
 }
 
 /*Footer*/
+
 .footer {
     background-color: #110A1D;
     position: relative;
@@ -461,7 +451,6 @@ body {
 .dot_light {
     position: absolute;
     border-radius: 50%;
-    /*z-index: 2;*/
 }
 
 .dot_light_1 {
@@ -544,6 +533,16 @@ body {
         margin-right: 1rem;
     }
 
+    .lang_en, .lang_ru {
+        vertical-align: bottom;
+        line-height: 1.1rem;
+    }
+
+    .login_button span {
+        vertical-align: top;
+        line-height: 0.75rem;
+    }
+
     .home_page {
         height: min-content;
     }
@@ -571,7 +570,6 @@ body {
 
     .page_menu a {
         margin: 0 0.5rem;
-        /*padding: 3rem 0;*/
     }
 
     .blog {
@@ -710,6 +708,7 @@ body {
         padding: 0 1.25rem;
         height: 3.125rem;
         display: block;
+        width: 100%;
         text-align: left;
         background-color: #110A1D;
         border: solid 2px #478BF9;
@@ -730,7 +729,6 @@ body {
     }
 
     .page_buttons {
-        /*display: none;*/
         visibility: hidden;
         display: block;
         width: 100%;
@@ -1080,4 +1078,8 @@ body {
 
 .open {
     display: block;
+}
+
+.open-flex {
+    display: flex;
 }
