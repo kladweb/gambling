@@ -19,6 +19,7 @@ function clickActions() {
   const iconClose = document.querySelector('.icon_close');
   const pageMenu = document.querySelector('.page_menu');
   const pageButtons = document.querySelector('.page_buttons');
+  let activeLanguage = "EN";
   let activeCard = null;
   reviewCards.forEach(card => {
     card.addEventListener('click', () => {
@@ -43,9 +44,11 @@ function clickActions() {
     if (buttonEn.style.display === 'none') {
       buttonEn.style.display = 'inline-block';
       buttonRu.style.display = 'none';
+      activeLanguage = "EN";
     } else {
       buttonEn.style.display = 'none';
       buttonRu.style.display = 'inline-block';
+      activeLanguage = "RU";
     }
   }
   closeModal.addEventListener('click', openCloseModal);
@@ -81,9 +84,17 @@ function clickActions() {
     }
     if (getComputedStyle(buttonRu).display !== 'none' && window.innerWidth <= 700) {
       buttonRu.style.display = 'none';
+      activeLanguage = "RU";
     }
     if (getComputedStyle(buttonEn).display !== 'none' && window.innerWidth <= 700) {
       buttonEn.style.display = 'none';
+      activeLanguage = "EN";
+    }
+    if (activeLanguage === "EN" && window.innerWidth > 700) {
+      buttonEn.style.display = 'inline-block';
+    }
+    if (activeLanguage === "RU" && window.innerWidth > 700) {
+      buttonRu.style.display = 'inline-block';
     }
   }
 }
