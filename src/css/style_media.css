@@ -1,5 +1,9 @@
 /*MEDIA*/
 @media (max-width: 1600px) {
+    .page_menu a, .menu_buttons {
+        user-select: none;
+    }
+
     .title_main {
         margin: 26em 0 0 2%;
     }
