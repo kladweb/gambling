@@ -1,0 +1,11 @@
+.close {
+    display: none;
+}
+
+.open {
+    display: block;
+}
+
+.open-flex {
+    display: flex;
+}
