@@ -206,6 +206,10 @@
 
 @media (max-width: 700px) {
     /*Header 700px*/
+    .header {
+        z-index: 15;
+    }
+
     .page_logo, .page_buttons {
         width: auto;
     }
